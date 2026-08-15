@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anand Babu — Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Anand<span>Babu</span></a>
+      <nav class="nav">
+        <a href="#posts">Posts</a>
+        <a href="#routine">Routine</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#subscribe">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-profile">
+        <div class="avatar" aria-hidden="true">AB</div>
+        <div class="hero-info">
+          <h1>Anand Babu</h1>
+          <p class="headline">Senior Research Engineer</p>
+          <p class="location">📍 Hyderabad, India</p>
+        </div>
+      </div>
+      <div class="hero-tagline">
+        <p>4 years in the automotive industry — building intelligent systems, writing about engineering, research, and the craft of software.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="posts">
+      <h2 class="section-title">Latest Posts</h2>
+      <div class="post-grid" id="post-grid"><!-- posts injected by script.js --></div>
+    </section>
+
+    <section id="routine" class="routine">
+      <h2 class="section-title">Daily Routine</h2>
+      <p class="routine-intro">A typical day in the life of an automotive research engineer — balancing deep work, collaboration, and continuous learning.</p>
+      <div class="timeline" id="routine-timeline"><!-- injected by script.js --></div>
+    </section>
+
+    <section id="experience" class="experience">
+      <h2 class="section-title">Experience & Stories</h2>
+      <p class="experience-intro">Longer reflections on lessons learned, hard problems solved, and the reality of shipping automotive software.</p>
+      <div class="experience-grid" id="experience-grid"><!-- injected by script.js --></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-bio">
+          <p>
+            I'm Anand Babu, a Senior Research Engineer based in Hyderabad with
+            4 years of experience in the automotive industry. My work sits at the
+            intersection of embedded systems, computer vision, and machine learning —
+            building perception and control systems for next-generation vehicles.
+          </p>
+          <p>
+            When I'm not debugging sensor fusion pipelines or optimizing inference
+            latency, I write about systems engineering, research-to-production
+            translation, and the occasional deep dive into automotive tech stacks.
+          </p>
+        </div>
+        <aside class="about-sidebar">
+          <div class="detail-card">
+            <h3>Current Role</h3>
+            <p>Senior Research Engineer</p>
+          </div>
+          <div class="detail-card">
+            <h3>Industry</h3>
+            <p>Automotive (4+ years)</p>
+          </div>
+          <div class="detail-card">
+            <h3>Location</h3>
+            <p>Hyderabad, India</p>
+          </div>
+          <div class="detail-card">
+            <h3>Focus Areas</h3>
+            <ul class="interest-list">
+              <li>Embedded ML / TinyML</li>
+              <li>Sensor Fusion &amp; Perception</li>
+              <li>Real-time Systems</li>
+              <li>Automotive Safety (ISO 26262)</li>
+              <li>C++ / Rust / Python</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="subscribe" class="subscribe">
+      <h2 class="section-title">Subscribe</h2>
+      <p>Get new posts delivered to your inbox.</p>
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="email" id="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="form-message" id="form-message"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Anand Babu. Built with HTML, CSS &amp; JS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
