@@ -50,17 +50,22 @@ const posts = [
   }
 ];
 
-// Daily routine timeline
-const routine = [
-  { time: "06:30", title: "Morning Prep", desc: "Coffee, quick stretch, scan overnight CI results and Slack" },
-  { time: "07:30", title: "Deep Work Block #1", desc: "Algorithm prototyping / model training / paper reading — no meetings, notifications off" },
-  { time: "10:00", title: "Standup & Sync", desc: "15-min team standup, then 30-min sync with perception/ML leads on blockers" },
-  { time: "11:00", title: "Code Review & PRs", desc: "Review 2–3 PRs, focus on safety-critical paths, ISO 26262 compliance checks" },
-  { time: "12:30", title: "Lunch / Walk", desc: "Step away from screens — essential for context switching" },
-  { time: "13:30", title: "Deep Work Block #2", desc: "Embedded integration: flashing boards, debugging CAN/FD logs, latency profiling" },
-  { time: "16:00", title: "Cross-team Collaboration", desc: "Hardware bring-up, simulation validation, or design review with systems team" },
-  { time: "17:30", title: "Wrap-up & Learning", desc: "Document findings, update tickets, 30 min reading (papers, blogs, Rust/embedded newsletters)" },
-  { time: "19:00", title: "Evening Reset", desc: "Gym, dinner, family — hard stop on work" }
+// Daily journal entries grouped by date
+const routineDays = [
+  {
+    date: "2026-10-25",
+    items: []
+  },
+  {
+    date: "2026-10-24",
+    items: [
+      { time: "6:00 AM", title: "Early Start", desc: "Woke up at 6:00 AM and got ready for the day." },
+      { time: "Morning", title: "Football Match", desc: "Played a great game, and we won in a penalty shootout." },
+      { time: "10:00 AM", title: "Back Home", desc: "Returned home after the match." },
+      { time: "11:30 AM", title: "Movie: 418", desc: "Watched the horror movie 418. The sound was excellent; I’d rate it 2.5 out of 5." },
+      { time: "Dinner", title: "Curd Rice", desc: "Had curd rice for dinner." }
+    ]
+  }
 ];
 
 // Experience & stories
@@ -172,15 +177,24 @@ function renderRoutine() {
   const container = document.getElementById('routine-timeline');
   if (!container) return;
 
-  container.innerHTML = routine.map(item => `
-    <div class="timeline-item">
-      <div class="timeline-marker" aria-hidden="true"></div>
-      <div class="timeline-time">${item.time}</div>
-      <div class="timeline-content">
-        <h4>${item.title}</h4>
-        <p>${item.desc}</p>
-      </div>
-    </div>
+  container.innerHTML = routineDays.map(day => `
+    <article class="routine-day" aria-labelledby="routine-date-${day.date}">
+      <h3 class="routine-date" id="routine-date-${day.date}">
+        <time datetime="${day.date}">${formatDate(day.date)}</time>
+      </h3>
+      ${day.items.length ? `<div class="timeline">
+        ${day.items.map(item => `
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-time">${item.time}</div>
+            <div class="timeline-content">
+              <h4>${item.title}</h4>
+              <p>${item.desc}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>` : '<p class="routine-empty">No entries yet. Add today’s activities whenever you’re ready.</p>'}
+    </article>
   `).join('');
 }
 

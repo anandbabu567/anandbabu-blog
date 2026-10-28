@@ -12,7 +12,7 @@
       <a href="#" class="logo">Anand<span>Babu</span></a>
       <nav class="nav">
         <a href="#posts">Posts</a>
-        <a href="#routine">Routine</a>
+        <a href="#daily-journal">Daily Journal</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="#subscribe">Subscribe</a>
@@ -22,16 +22,40 @@
 
   <section class="hero">
     <div class="container">
-      <div class="hero-profile">
-        <div class="avatar" aria-hidden="true">AB</div>
-        <div class="hero-info">
-          <h1>Anand Babu</h1>
-          <p class="headline">Senior Research Engineer</p>
-          <p class="location">📍 Hyderabad, India</p>
+      <div class="hero-panel">
+        <div class="hero-profile">
+          <img class="avatar" src="assets/profile.jpg" alt="Anand Babu" />
+          <div class="hero-info">
+            <p class="eyebrow">Engineer • Writer • Researcher</p>
+            <h1>Anand Babu</h1>
+            <p class="headline">Senior Research Engineer</p>
+            <p class="location">📍 Hyderabad, India</p>
+          </div>
         </div>
-      </div>
-      <div class="hero-tagline">
-        <p>4 years in the automotive industry — building intelligent systems, writing about engineering, research, and the craft of software.</p>
+
+        <div class="hero-actions">
+          <a href="#posts" class="primary-btn">Read my work</a>
+          <a href="#subscribe" class="secondary-btn">Subscribe</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Key statistics">
+          <div class="stat-card">
+            <strong>4+</strong>
+            <span>Years</span>
+          </div>
+          <div class="stat-card">
+            <strong>8</strong>
+            <span>Focus areas</span>
+          </div>
+          <div class="stat-card">
+            <strong>∞</strong>
+            <span>Curiosity</span>
+          </div>
+        </div>
+
+        <div class="hero-tagline">
+          <p>4 years in the automotive industry — building intelligent systems, writing about engineering, research, and the craft of software.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -42,10 +66,10 @@
       <div class="post-grid" id="post-grid"><!-- posts injected by script.js --></div>
     </section>
 
-    <section id="routine" class="routine">
-      <h2 class="section-title">Daily Routine</h2>
-      <p class="routine-intro">A typical day in the life of an automotive research engineer — balancing deep work, collaboration, and continuous learning.</p>
-      <div class="timeline" id="routine-timeline"><!-- injected by script.js --></div>
+    <section id="daily-journal" class="routine">
+      <h2 class="section-title">Daily Journal</h2>
+      <p class="routine-intro">A date-by-date journal of everyday moments, games, movies, and meals.</p>
+      <div id="routine-timeline"><!-- dated entries injected by script.js --></div>
     </section>
 
     <section id="experience" class="experience">
